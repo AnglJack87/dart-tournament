@@ -11,8 +11,11 @@
     <ul>
         @foreach($tournaments as $tournament)
             <li>
-                {{ $tournament->name }} (Start: {{ $tournament->start_date }})
-            </li>
+    <a href="/tournaments/{{ $tournament->id }}/players">
+        {{ $tournament->name }} (Start: {{ $tournament->start_date }})
+    </a>
+</li>
+
         @endforeach
     </ul>
 
